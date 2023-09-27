@@ -1,0 +1,227 @@
+:root {
+  --clr-accent-hsl-0: 0, 0%, 100%;
+  --clr-accent-hsl-1: 210, 46%, 95%;
+  --clr-accent-hsl-2: 212, 23%, 69%;
+  --clr-accent-hsl-3: 214, 17%, 51%;
+  --clr-accent-hsl-4: 217, 19%, 35%;
+
+  --clr-accent-0: hsl(var(--clr-accent-hsl-0));
+  --clr-accent-1: hsl(var(--clr-accent-hsl-1));
+  --clr-accent-2: hsl(var(--clr-accent-hsl-2));
+  --clr-accent-3: hsl(var(--clr-accent-hsl-3));
+  --clr-accent-4: hsl(var(--clr-accent-hsl-4));
+
+  --ff-primary: "Manrope", sans-serif;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-100: 0.8125rem;
+  --fs-200: 1rem;
+  --fs-300: 1.2rem;
+  --fs-400: 1.5rem;
+  --fs-500: 2rem;
+
+  --size-100: 0.5rem;
+  --size-200: 0.75rem;
+  --size-300: 1rem;
+  --size-400: 1.5rem;
+  --size-500: 2rem;
+
+  /* Tokens */
+
+  --clr-bg-body: var(--clr-accent-1);
+  --clr-body: var(--clr-accent-3);
+  --clr-bg-card: var(--clr-accent-0);
+  --clr-heading: var(--clr-accent-4);
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-body: var(--fw-medium);
+  --fw-heading: var(--fw-bold);
+
+  --fs-body: var(--fs-100);
+  --fs-heading: var(--fs-300);
+}
+
+/* Reset Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+/* General Styles */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-body);
+  color: var(--clr-body);
+  background-color: var(--clr-bg-body);
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin-inline: var(--size-300);
+}
+
+.card {
+  display: grid;
+  place-items: center;
+
+  background: var(--clr-bg-card);
+  border-radius: var(--size-300);
+  box-shadow: 0.5rem 1rem 3rem hsl(var(--clr-accent-hsl-3), 0.5);
+  max-width: 20rem;
+}
+
+.img-wrapper img {
+  border-radius: var(--size-300) var(--size-300) 0 0;
+}
+
+.description {
+  padding: var(--size-400);
+}
+
+.heading {
+  color: var(--clr-heading);
+  font-size: var(--fs-heading);
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-heading);
+}
+
+.avatar {
+  max-width: var(--size-500);
+  border-radius: 50%;
+}
+
+.name {
+  color: var(--clr-accent-4);
+  font-weight: var(--fw-bold);
+}
+
+.share {
+  position: relative;
+  background: hsl(var(--clr-accent-hsl-2), 0.65);
+  width: var(--size-500);
+  height: var(--size-500);
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+}
+
+.share:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -18rem;
+  width: 350px;
+  height: 60px;
+  background: hsl(var(--clr-accent-hsl-4), 1);
+  border-radius: var(--size-100);
+
+  background-image: url(images/icon-facebook.svg),
+    url(images/icon-pinterest.svg), url(images/icon-twitter.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 6rem center, 8rem center, 10rem center;
+}
+
+/* Utilities */
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--size-100);
+}
+
+.align-center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.data-width {
+  width: fit-content;
+}
+
+.spacer {
+  margin-top: var(--size-400);
+}
+
+.coderSeth {
+  font-size: var(--size-300);
+  text-align: center;
+  padding-block: var(--size-100);
+}
+
+.coderSeth a {
+  --cS-color: 228, 45%, 44%;
+  color: hsl(var(--cS-color));
+}
+
+/* Small screen widths */
+
+@media (max-width: 800px) {
+  .container {
+    margin-top: var(--size-100);
+  }
+}
+
+/* Big screen widths */
+
+@media (min-width: 800px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 44.5rem;
+  }
+
+  .img-wrapper img {
+    border-radius: var(--size-300) 0 0 var(--size-300);
+  }
+
+  .share:hover::after {
+    content: "";
+    position: absolute;
+    top: -4rem;
+    width: 200px;
+    height: 50px;
+    background: hsl(var(--clr-accent-hsl-4), 1);
+    border-radius: var(--size-100);
+
+    background-image: url(images/icon-facebook.svg),
+      url(images/icon-pinterest.svg), url(images/icon-twitter.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 6rem center, 8rem center, 10rem center;
+  }
+}
