@@ -15,3 +15,4 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - Github: https://github.com/coderSeth13?tab=repositories
 
 ### Screenshot
+![Screenshot 2023-09-30 at 21-22-32 Article preview component](https://github.com/coderSeth13/FEM_ARTICLE_PROOF_COMPONENT/assets/145410639/5a351a89-4422-4ed8-be3d-5c95b82d102a)
