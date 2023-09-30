@@ -10,7 +10,8 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - Live Site URL: https://coderseth13.github.io/FEM_ARTICLE_PROOF_COMPONENT/
 
 #### Social links
-
+- Twitter: https://twitter.com/coderSeth13?s=09
+- Instagram: https://www.instagram.com/coderseth13.cs/
 - Frontend Mentor: https://www.frontendmentor.io/profile/coderSeth13:
 - Github: https://github.com/coderSeth13?tab=repositories
 
