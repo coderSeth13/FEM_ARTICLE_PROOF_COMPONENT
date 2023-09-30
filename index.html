@@ -71,7 +71,13 @@
                   </figcaption>
                 </figure>
 
-                <button class="share-btn">
+                <button
+                  class="share-btn"
+                  aria-controls="share"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  data-share-btn-js
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="15"
@@ -85,7 +91,13 @@
                 </button>
               </section>
 
-              <div class="article__tooltip | article__tooltip-toggle">
+              <div
+                class="article__tooltip | article__tooltip-toggle"
+                role="tooltip"
+                aria-expanded="false"
+                id="share"
+                data-tooltip-js
+              >
                 <h3 class="article__heading-tooltip">Share</h3>
 
                 <ul class="article__tooltip-icons">
