@@ -7,7 +7,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 #### Project links
 
 - Solution URL: https://github.com/coderSeth13/FEM_ARTICLE_PROOF_COMPONENT.git
-- Live Site URL:
+- Live Site URL: https://coderseth13.github.io/FEM_ARTICLE_PROOF_COMPONENT/
 
 #### Social links
 
